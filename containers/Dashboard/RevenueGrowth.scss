@@ -1,0 +1,18 @@
+.RevenueGrowth-content{
+  h2{
+    font-size: 14px;
+    line-height: 17px;
+    color: #637381;
+    margin-bottom: 2rem;
+  }
+  .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    .date{
+      min-width: 21.8rem;
+    }
+  }
+}

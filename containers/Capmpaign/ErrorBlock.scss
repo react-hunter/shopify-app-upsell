@@ -1,0 +1,18 @@
+.ErrorBlock{
+  position: fixed;
+  width: 100%;
+  background: #FDF5F2;
+  // min-height: 60px;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 77px;
+  border-top: 3px solid #DE3618;
+  padding: 16px;
+  z-index: 90;
+  img{
+    margin-right: 16px;
+  }
+}

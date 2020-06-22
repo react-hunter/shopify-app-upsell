@@ -1,0 +1,118 @@
+html,
+body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background-color: #f4f6f8;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  text-align: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
+  max-width: 450px;
+}
+
+.message__title {
+  font-size: 22px;
+  font-weight: 100;
+  margin-top: 15px;
+  color: #637381;
+  margin-bottom: 8px;
+}
+
+p {
+  -webkit-margin-after: 0px;
+  -webkit-margin-before: 0px;
+  font-size: 15px;
+  color: #637381;
+  line-height: 21px;
+  margin-bottom: 4px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #7f828b;
+  border: 1px solid #7f828b;
+}
+
+.hk-logo,
+.app-icon {
+  fill: #dbe1ec;
+}
+
+.info {
+  fill: #9fabbc;
+}
+
+body.friendly {
+  background: -webkit-linear-gradient(-45deg, #8363a1 0%, #74a8c3 100%);
+  background: linear-gradient(135deg, #8363a1 0%, #74a8c3 100%);
+}
+
+body.friendly .message__title {
+  color: #fff;
+}
+
+body.friendly p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+body.friendly .hk-logo,
+body.friendly .app-icon {
+  fill: rgba(255, 255, 255, 0.9);
+}
+
+body.friendly .info {
+  fill: rgba(255, 255, 255, 0.9);
+}
+
+body.friendly .btn {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.info_area {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+}
+
+.logo {
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+}
+
+code {
+  background: #313440;
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: #d9dcef;
+}
+
+code span {
+  color: #d093e3;
+}
+
+p a {
+  color: #408fec;
+}

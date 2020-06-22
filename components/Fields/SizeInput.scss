@@ -1,0 +1,39 @@
+.SizeInput{
+  .Polaris-InlineError{
+    margin-top: 0.4rem;
+  }
+  .input-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .input{
+      display: flex;
+      .Polaris-Labelled__Error{
+        display: none;
+      }
+      .Polaris-TextField__Input{
+        max-width: 132px;
+        text-align: right;
+      }
+      .Polaris-TextField__Backdrop{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .hint-text{
+        height: 36px;
+        background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);
+        border: 1px solid #C4CDD5;
+        margin-left: -2px;
+        display: flex;
+        z-index: 2;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        &.is-error{
+          border-color: #bf0711;
+        }
+      }
+    }
+  }
+}

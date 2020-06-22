@@ -1,0 +1,15 @@
+.AdvancedSettings{
+  padding: 2rem 2.7rem;
+  .Polaris-Heading{
+    margin-bottom: 2rem;
+  }
+  p{
+    margin-bottom: 2rem;
+  }
+  .Polaris-Label{
+    margin-bottom: 2rem;
+  }
+  .Polaris-Stack__Item + .Polaris-Stack__Item{
+    margin-left: 3rem;
+  }
+}

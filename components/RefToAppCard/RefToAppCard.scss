@@ -1,0 +1,42 @@
+.RefToAppCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  .new-label{
+    background: linear-gradient(113.89deg, #0AEFDB 0%, #18E6A8 100%);
+    border-radius: 2px;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    padding: 3px 5px; 
+  }
+  .title{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #0CEED3;
+    margin-top: 17px;
+  }
+  .logo{
+    margin-top: 17px;
+  }
+  h1{
+    font-size: 20px !important;
+    line-height: 24px;
+    color: #212B36;
+    margin-top: 20px;
+  }
+  p{
+    font-size: 14px;
+    line-height: 17px;
+    color: #212B36;
+    margin-top: 12px;
+    text-align: center;
+    padding: 0 16px;
+  }
+  a{
+    margin-top: 16px;
+  }
+}

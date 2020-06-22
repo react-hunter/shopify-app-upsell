@@ -1,0 +1,11 @@
+.QuantityInput{
+  width: 100%;
+  .input-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .input{
+      width: 7rem
+    }
+  }
+}

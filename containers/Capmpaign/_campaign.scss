@@ -1,0 +1,144 @@
+.Campaign{
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  margin-bottom: 76px;
+  .max-width-195{
+    max-width: 195px;
+  }
+  .block-setting{
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    width: 100%;
+    border-right: 1px solid #EBEEF0;
+    .back{
+      color: #637381;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      cursor: pointer;
+      .Polaris-Icon{
+        color: #637381;
+      }
+    }
+    .trigger-amount-input{
+      max-width: 220px;
+    }
+    .create-new-actions{
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      .Polaris-Link{
+        // margin-left: 2rem;
+      }
+      button{
+        margin-right:20px;
+      }
+      @media (max-width: 540px) {
+        flex-direction: column;
+        align-items: start !important;
+        .Polaris-Link{
+          margin-left: 0rem !important;
+          margin-top: 1.5rem !important;
+        }
+      }
+    }
+    .label-radio-button{
+      display: flex;
+      align-items: center;
+      .Polaris-Icon{
+        margin-left: 1rem;
+      }
+    }
+    .icon-smart{
+      width: 2.8rem;
+      height: 2.8rem;
+      background: linear-gradient(144.46deg, #AB01A5 11.9%, #3D0187 100%);
+      fill: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .Polaris-Icon{
+        width: 1.4rem;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        height: 1.4rem;
+      }
+    }
+    .input-name{
+      max-width: 53.8rem;
+    }
+    .padding-horizontal{
+      padding: 0 3rem;
+    }
+    .margin-bottom{
+      margin-bottom: 2rem;
+    }
+    h1{
+      color: #212B36;
+      font-size: 2.8rem;
+      line-height: 3.3rem;
+    }
+    h2{
+      color: #212B36;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+    }
+    p{
+      color: #637381;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      margin: 0;
+      padding: 0;
+    }
+    hr{
+      border: none;
+      border-top: 1px solid #EBEEF0;
+      // width: 100%;
+      padding: 0;
+      margin: 0 3rem;
+    }
+    .footer-actions{
+      background: #F4F6F8;
+      padding: 2rem;
+      display: flex;
+      position: fixed;
+      z-index: 99;
+      bottom: 0;
+      width: 100%;
+      justify-content: space-between;
+      border-top: 1px solid #DFE3E8;
+      .Polaris-Button + .Polaris-Button{
+        margin-left: 2rem;
+        @media (max-width: 540px) {
+          margin-left: 0.5rem;
+          min-width: 140px;
+        }
+      }
+    }
+  }
+  .block-preview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 304px;
+    height: 100vh;
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+}
+
+.btn-actions{
+  display: flex;
+}
+
+.btn-cancel{
+  margin-right: 10px;
+}

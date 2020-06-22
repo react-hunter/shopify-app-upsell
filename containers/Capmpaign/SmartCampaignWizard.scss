@@ -1,0 +1,158 @@
+.SmartCampaignWizard-modal {
+  .smart-campaign {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .btn-gr{
+      font-size: 16px;
+      line-height: 19px;
+      color: #FFFFFF;
+      padding: 6px 16px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 9px;
+      &.gr0{
+        background: linear-gradient(100.62deg, #AC01A5 0%, #400188 101.91%);
+      }
+      &.gr1{
+        background: linear-gradient(99.31deg, #FF8B03 0%, #FFBC04 101.91%);
+      }
+      &.gr2{
+        background: linear-gradient(98.44deg, #03FF59 0%, #00FBEC 101.91%);
+      }
+      &.gr3{
+        background: linear-gradient(100.62deg, #AC01A5 0%, #400188 101.91%);
+      }
+    }
+    .text{
+      color: #637381;
+      text-align: center;
+      font-size: 14px;
+      line-height: 17px;
+      max-width: 391px;
+      margin-bottom: 20px;
+    }
+    .product-items{
+      width: 100%;
+      max-width: 220px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      .item{
+        width: 80px;
+        height: 80px;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+    img{
+      width: 40px;
+      margin-bottom: 10px;
+    }
+    .footer{
+      width: calc(100% + 4rem);
+      padding: 20px;
+      border-top: 1px solid #DFE3E8;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      .btn-text{
+        display: flex;
+        align-items: center;
+      }
+      .Polaris-Button__Content{
+        .Polaris-Icon{
+          display: inline-block;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+  .smart-confirm{
+    // padding: 12.5rem 7rem;
+    height: 341px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .text{
+      color: #637381;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      margin-bottom: 3rem;
+      max-width: 391px;
+    }
+    .actions{
+      .Polaris-Button + .Polaris-Button{
+        margin-left: 2rem;
+      }
+    }
+  }
+  .block-loader {
+    height: 341px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    img{
+      margin-bottom: 20px;
+    }
+
+    .title{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 14px;
+      line-height: 17px;
+      color: #637381;
+      max-width: 391px;
+      text-align: center;
+    }
+    .spinner-box{
+      margin-right: 9px;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0);
+      }
+
+      to {
+        transform: rotate(359deg);
+      }
+    }
+
+    .spinner-box {
+      width: 37px;
+      height: 37px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+    }
+
+    .circle-border {
+      width: 37px;
+      height: 37px;
+      padding: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: rgb(43, 1, 179);
+      background: linear-gradient(0deg, rgba(63, 249, 220, 0.1) 33%, rgba(43, 1, 179, 1) 100%);
+      animation: spin .8s linear 0s infinite;
+    }
+
+    .circle-core {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      border-radius: 50%;
+    }
+  }
+}

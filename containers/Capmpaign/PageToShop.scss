@@ -1,0 +1,42 @@
+.PageToShop{
+  .show-the-funnel{
+    .Polaris-Button {
+      height: 48px;
+    }
+  }
+  .selected-page{
+    display: flex;
+    flex-direction: row;
+    .item{
+      
+      width: 160px;
+      height: 140px;
+      border: 1px solid #C4CDD5;
+      box-sizing: border-box;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      color: #212B36;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      img{
+        margin-top: 7px;
+      }
+      .text{
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        margin-top: 10px;
+      }
+      &.active{
+        background: #5C6AC4;
+        border: 1px solid #5C6AC4;
+        color: white;
+      }
+    }
+    .item + .item{
+      margin-left: 10px;
+    }
+  }
+}

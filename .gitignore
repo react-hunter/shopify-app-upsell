@@ -1,0 +1,16 @@
+node_modules
+.next
+.env
+npm-debug.log
+.prettierrc
+.DS_Store
+.vscode
+yarn.lock
+yarn-error.log
+TODO
+static/widget.js
+fixtures
+app.production.yaml
+app.staging.yaml
+newrelic_agent.log
+server/controllers/smartWizardMock.js

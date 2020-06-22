@@ -1,0 +1,123 @@
+.ColorPickerInput{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;;
+  align-items: center;
+  position: relative;
+
+  .none{
+    // border: 1px solid red;
+    &:after{
+      content: '';
+      // padding-top: 20px;
+      height: 2px; 
+      width: 100%;
+      // padding-left: 20px; 
+      position: absolute;
+      // display: block;
+      background: #FF4953;
+      // transform-origin: 50px 50px;
+      -webkit-transform: rotate(50.53deg);
+      -moz-transform: rotate(50.53deg);
+      -o-transform: rotate(50.53deg);
+      -ms-transform: rotate(50.53deg);
+      transform: rotate(50.53deg);
+    }
+  }
+
+}
+.ColorPickerInput-color .ColorPickerInput-value{
+  width: 30px;
+  height: 30px;
+  border: 1px solid #F0F0F0;
+  border-radius: 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.ColorPickerInput-color{
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #C4CDD5;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ColorPickerInput-block{
+  position: absolute;
+  top: 0;
+  width: 460px;
+  display: flex;
+  border-radius: 5px;
+  background: white;
+  left: 40px;
+  border: 1px solid #DFE3E8;
+  z-index: 99999;
+}
+
+.ColorPickerInput-hax-input {
+  padding: 16px;
+  position: relative;
+}
+
+
+.ColorPickerInput-hax-input .label {
+  position: absolute;
+  top: 24px;
+  z-index: 99;
+  right: 24px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #919EAB;
+
+}
+
+.ColorPickerInput-hax-input .Polaris-TextField input{
+  padding-left: 35px;
+}
+
+.ColorPickerInput-hax-input .point {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: 99;
+  top: 24px;
+  left: 24px;
+  border-radius: 50%;
+}
+
+.ColorPickerInput-default{
+  border-left: 1px solid #DFE3E8;
+}
+
+.ColorPickerInput-default-title{
+  padding: 0 14px;
+  padding-top: 14px;
+  color: #919EAB;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.ColorPickerInput-default-items{
+  padding: 0 10px;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  .ColorPickerInput-default-item{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+    border-radius: 50%;
+    border: 1px solid #EEEEEE;
+    align-items: center;
+    display: flex;
+    &:hover{
+      border: 2px solid #606fc7;
+    }
+  }
+}

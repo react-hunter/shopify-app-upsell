@@ -1,0 +1,65 @@
+.CustomDropDown {
+  position: relative;
+  width: 100%;
+}
+
+.CustomDropDown .drop-wrapper {
+
+  position: absolute;
+  z-index: 99;
+  /* top: 0; */
+  width: 100%;
+  background: white;
+  border: 1px solid #CECECE;
+  /* margin-top: -1px; */
+  /* border-radius: 3px; */
+  /* padding-top: 5px; */
+  /* padding-bottom: 5px; */
+} 
+
+.drop-wrapper .drop-item-option{
+  font-size: 16px;
+  line-height: 22px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.drop-item-option:hover{
+  background: #0078d7;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.drop-item-option.active{
+  background: #0078d7;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.CustomDropDown .CustomDropDown-Input{
+  display: flex;
+  width: 100%;
+  font-weight: 400;
+  line-height: 2.4rem;
+  text-transform: initial;
+  letter-spacing: initial;
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 3.6rem;
+  padding: 0.5rem 0.8rem 0.5rem 1.2rem;
+  border: 1px solid #C4CDD5;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.CustomDropDown .CustomDropDown-Input.active{
+  border: 1px solid #C4CDD5;
+  border-color: #2a6dc9;
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(42,109,201,1);
+  -moz-box-shadow: 0px 0px 1px 1px rgba(42,109,201,1);
+  box-shadow: 0px 0px 1px 1px rgba(42,109,201,1);
+}

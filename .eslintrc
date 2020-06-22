@@ -1,0 +1,43 @@
+{
+  "extends": "plugin:shopify/react",
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },  
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "amplitude": "readonly"
+  },
+  "rules": {
+    "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
+    "member-access": [false],
+    "object-literal-sort-keys": [false],
+    "ordered-imports": [false],
+    "interface-name": [false],
+    "quotemark": [true, "single", "jsx-double"],
+    "quotes": ["error", "single"],
+    "babel/camelcase": [false],
+    "no-negated-condition": [0, "never"],
+    "no-extra-boolean-cast": [0, "never"],
+    "line-comment-position": [0, "never"],
+    "no-warning-comments": [0, "never"],
+    "jsx-a11y/click-events-have-key-events": [0, "never"],
+    "no-mixed-operators": [0, "never"],
+    "babel/object-curly-spacing": [1, "always"],
+    "react/react-in-jsx-scope": [0, "never"],
+    "shopify/jsx-no-hardcoded-content": [0, "never"],
+    "no-console": [0, "never"],
+    "react/jsx-fragments": [0, "never"],
+    "react/jsx-no-undef": [0, "never"],
+    "react/no-deprecated": [0, "never"],
+    "sort-class-members/sort-class-members": [0, "never"],
+    "shopify/react-prefer-private-members": [0, "never"],
+    "react/no-access-state-in-setstate": [0, "never"],
+    "react/prop-types": [0, "never"],
+    "shopify/jsx-no-complex-expressions": [0, "never"]
+  }
+}

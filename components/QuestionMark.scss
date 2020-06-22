@@ -1,0 +1,54 @@
+.QuestionMark {
+  position: relative;
+  /* display: inline-block; */
+}
+
+.Polaris-Tooltip__Content{
+  max-height: 20rem;
+}
+
+.Polaris-Tooltip__Wrapper{
+  max-height: 20rem;
+}
+
+.QuestionMark .tooltiptext {
+  visibility: hidden;
+  right: 0;
+  width: 202px;
+  display: flex;
+  /* padding: 5px 10px; */
+  background-color: #F6F6F6;
+  color: #212B36;
+  text-align: center;
+  border-radius: 6px;
+  padding: 9px 10px;
+  position: absolute;
+  z-index: 1;
+  right: -36px;
+  bottom: 32px;
+  /* right: -78px; */
+  /* left: 50%; */
+  /* margin-left: ; */
+  font-size: 13px;
+  line-height: 15px;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 99999;
+}
+
+.QuestionMark .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 38px;
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #F6F6F6 transparent transparent transparent;
+}
+
+.QuestionMark:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

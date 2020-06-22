@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="./page.css" />
+		<script src="./action.js"></script>
+
+		<title>Document</title>
+
+		<script>
+			function showRestartBtn() {
+				document.getElementById('page-title').style.display = 'none';
+				document.getElementById('go-to-page-title').style.display = 'block';
+				document.getElementById('btn-restar').style.display = 'block';
+			}
+
+		</script>
+	</head>
+	<body>
+		<div class="hide loader-container" id = "loader-container">
+			<div class="loader"></div>
+		</div>
+		<div class="page-container">
+			<div id="page-title" class="page-title">Product Page</div>
+			<div id="go-to-page-title" style="display: none;" class="page-title">Product Page</div>
+			<button id='btn-restar' onclick="window.parent.clearButtonClick();" class="btn-restar" style="display: none;">Restart</button>
+		</div>
+		<script>
+			window.conversionBearUpsellSettings = {
+				isDemo: true,
+				forseIsMobile: true,
+				onLoaded: function(){
+					// console.log('onLoaded')
+				},
+				getDemoCheckoutData: function(data){
+					showRestartBtn();
+					window.parent.showButtonRefresh('mobile');
+				}
+			}
+
+			var campaign = localStorage.getItem('upsellCampaing') ? JSON.parse(localStorage.getItem('upsellCampaing')) : null;
+
+			let page_to_show = "Thank You Page";
+			let go_to_page_text = "Thank You Page";
+
+			if(campaign && campaign.page_to_show){
+				switch (campaign.page_to_show) {
+					case 'cart_page':
+						page_to_show = 'Cart Page'
+						break;
+					case 'thankyou_page':
+						page_to_show = 'Thank You Page'
+						break;
+					case 'product_page':
+						page_to_show = 'Product Page'
+						break;	
+					default:
+						break;
+				}
+			}
+
+			if(campaign && campaign.action_accept_offer){
+				switch (campaign.action_accept_offer) {
+					case 'go_to_checkout':
+						go_to_page_text = 'Checkout Page'
+						break;
+					case 'go_to_cart':
+						go_to_page_text = 'Cart Page'
+						break;	
+					case 'stay_on_page': 
+						go_to_page_text = page_to_show;
+						break	
+					default:
+						break;
+				}
+			}
+
+			document.getElementById('page-title').innerText = page_to_show;
+			document.getElementById('go-to-page-title').innerText = go_to_page_text;
+
+			if (campaign && campaign.trigger != 'trigger_all' && campaign.trigger !== 'trigger_amount') {
+				document.getElementById('loader-container').style.display = 'block';
+				fetch('/default/demo_campaign_product_preview', {
+					method: 'post',
+					headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+					body: localStorage.getItem('upsellCampaing')
+				}).then(function(res) {
+					return res.json();
+				}).then(function(result) {
+					if(!result){
+						return;
+					}
+					document.getElementById('loader-container').style.display = 'none';
+					var script = document.createElement("script");
+					script.type = "text/javascript";
+					script.src = "/script" + window.location.search;
+					document.body.appendChild(script);
+					return;
+				})
+			} else {
+
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				script.src = "/script" + window.location.search;
+				document.body.appendChild(script);
+			}
+		</script>
+	</body>
+</html>

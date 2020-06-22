@@ -1,0 +1,59 @@
+.UpsellStatistics-content{
+  h2{
+    font-size: 14px;
+    line-height: 17px;
+    color: #637381;
+    margin-bottom: 2rem;
+  }
+  .static-total{
+    border: 1px solid #C4CDD5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    span{
+      min-height: 9.9rem;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .item{
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      // justify-content: center;
+      padding-top: 2rem;
+      display: flex;
+      &.border-r{
+        border-right: 1px solid #C4CDD5;
+      }
+      
+      .value{
+        font-size: 2.6rem;
+        line-height: 3.1rem;
+        color: #212B36;
+        margin-bottom: 0.4rem;
+      }
+      .title{
+        color: #637381;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+      }
+      .aov{
+        display: flex;
+        margin-top: 2px;
+        font-size: 12px;
+        line-height: 14px;
+        color: #212B36;
+        div{
+          color: #50b83c;
+          padding: 0 3px;
+        }
+      }
+    }
+  }
+}

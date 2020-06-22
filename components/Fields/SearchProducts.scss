@@ -1,0 +1,237 @@
+.SearchProducts {
+  max-width: 538px;
+  position: relative;
+  .Polaris-InlineError {
+    margin-top: 0.4rem;
+  }
+  &.error {
+    .input-wrap {
+      background-color: #fbeae5 !important;
+      border-color: #bf0711 !important;
+      &.active {
+        -webkit-box-shadow: 0px 0px 1px 1px #bf0711;
+        -moz-box-shadow: 0px 0px 1px 1px #bf0711;
+        box-shadow: 0px 0px 1px 1px #bf0711;
+      }
+      input {
+        background-color: #fbeae5 !important;
+      }
+    }
+  }
+  .input-wrap {
+    background: #ffffff;
+    border: 1px solid #c4cdd5;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &.active {
+      border-color: #5c6ac4;
+      -webkit-box-shadow: 0px 0px 1px 1px #5c6ac4;
+      -moz-box-shadow: 0px 0px 1px 1px #5c6ac4;
+      box-shadow: 0px 0px 1px 1px #5c6ac4;
+    }
+    .value-item {
+      display: flex;
+      align-items: center;
+      background: #dfe3e8;
+      border-radius: 3px;
+      margin: 4px;
+      padding-left: 8px;
+      padding-right: 8px;
+      font-size: 14px;
+      line-height: 17px;
+      height: 28px;
+      color: #212b36;
+      max-width: 22.3rem;
+      .text {
+        text-align: right;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .Polaris-Icon {
+        width: 12px;
+        height: 12px;
+        fill: #637381;
+        cursor: pointer;
+      }
+    }
+    .input-search {
+      margin: 4px 0;
+      display: flex;
+      flex: auto;
+      flex-direction: row;
+      align-items: center;
+      min-width: 150px;
+      .Polaris-Icon {
+        margin: 0 1rem;
+        // margin-right: 1rem;
+        fill: #919eab;
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+      input {
+        border: none;
+        height: 28px;
+        width: 100%;
+        font-size: 15px;
+        line-height: 18px;
+        color: #212b36;
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: #919EAB;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          color: #919EAB;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+          color: #919EAB;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+          color: #919EAB;
+        }
+      }
+    }
+  }
+  .list-items {
+    position: absolute;
+    z-index: 98;
+    background: #ffffff;
+    border: 1px solid #c4cdd5;
+    border-radius: 3px;
+    width: 100%;
+    margin-top: -1px;
+    max-height: 310px;
+    overflow: hidden;
+    overflow-y: auto;
+    .item {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      height: 64px;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      .image {
+        width: 40px;
+        height: 40px;
+        background-position: center;
+        background-size: cover;
+        margin-right: 13px;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        line-height: 17px;
+        color: #212b36;
+        @media(max-width: 540px) {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+      &:hover {
+        background: rgba(223, 227, 232, 0.3);
+      }
+    }
+
+    .last-list-item-refine-search{
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      height: 64px;
+      font-size: 14px;
+      line-height: 17px;
+      color: #212b36;
+    }
+    
+    .no-search-results {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 12px 20px;
+      height: 64px;
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        line-height: 17px;
+        color: #212b36;
+      }
+    }
+
+    .block-loader {
+      height: 341px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      img {
+        margin-bottom: 20px;
+      }
+      .spinner-box {
+        margin-right: 9px;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0);
+        }
+
+        to {
+          transform: rotate(359deg);
+        }
+      }
+
+      .spinner-box {
+        width: 37px;
+        height: 37px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+      }
+
+      .circle-border {
+        width: 37px;
+        height: 37px;
+        padding: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: rgb(43, 1, 179);
+        background: linear-gradient(
+          0deg,
+          rgba(63, 249, 220, 0.1) 33%,
+          rgba(43, 1, 179, 1) 100%
+        );
+        animation: spin 0.8s linear 0s infinite;
+      }
+
+      .circle-core {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

@@ -1,0 +1,306 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
+
+html {
+  /* Load system fonts */
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto,
+    Segoe UI, Helvetica Neue, sans-serif;
+
+  /* Make type rendering look crisper */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Disable auto-enlargement of small text in Safari */
+  text-size-adjust: 100%;
+
+  /* Enable kerning and optional ligatures */
+  text-rendering: optimizeLegibility;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.Polaris-Frame {
+  min-height: auto;
+}
+
+.Polaris-Text-Heading {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.Polaris-Text-Body {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.Polaris-Link {
+  fill: #006fbb;
+}
+
+.Polaris-Page {
+  max-width: 100%;
+}
+
+.Polaris-Card {
+  overflow: visible;
+  position: relative;
+}
+
+.Polaris-Layout {
+  margin-left: 0;
+  margin-top: 0;
+  margin-right: 3.2rem;
+}
+
+.Polaris-Layout__Section {
+  margin-left: 32px;
+}
+
+.headerMainToggleButton {
+  margin-top: 20px;
+  @media (max-width: 540px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.Polaris-Tooltip__Content {
+  max-width: 25rem;
+}
+
+.SettingToggle_Title .Polaris-Icon {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.SettingToggle_Title {
+  font-size: 2rem;
+  line-height: 2rem;
+  display: flex;
+  align-items: center;
+  b {
+    margin-left: 4px;
+  }
+  @media (max-width: 540px) {
+    display: block;
+    b {
+      display: inline-block;
+    }
+    div {
+      display: contents !important;
+    }
+  }
+}
+
+.SettingToggle_Description {
+  color: #637381;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 17px;
+}
+
+.red {
+  color: #de3618;
+}
+
+.green {
+  color: #50b83c;
+}
+
+.Question-cart-header {
+  display: flex;
+  position: absolute;
+  top: 2.3rem;
+  right: 2rem;
+  // padding: 2rem 2rem 0;
+}
+
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
+.fixed-action-bottom {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  right: 0;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background: #f4f6f8;
+  border-top: 1px solid #dfe3e8;
+}
+
+.Icon-card-title {
+  display: flex;
+  flex-direction: row;
+  color: #212b36;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  align-items: center;
+  .Polaris-Icon {
+    margin: 0;
+    margin-right: 0.9rem;
+  }
+}
+
+*,
+*:before,
+*:after {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  outline: none !important;
+}
+
+@import "Design/design";
+@import "Capmpaigns/campaigns";
+@import "Capmpaign/campaign";
+@import "Dashboard/dashboard";
+@import "Pricing/pricing";
+
+.tab-advanced {
+  .meneger-account{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p{
+      color: #637381;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+  .mt-20 {
+    margin-top: 20px;
+  }
+  .header-title {
+    color: #212b36;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    margin-bottom: 1.4rem;
+    font-weight: bold;
+  }
+  .input-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    &.is-error {
+      margin-bottom: 44px;
+      .Polaris-Labelled__Error {
+        position: absolute;
+      }
+    }
+
+    &.full {
+      justify-content: flex-end;
+      .advanced-input {
+        min-width: 100%;
+      }
+      .Polaris-Button {
+        margin-top: 20px;
+      }
+    }
+    .advanced-input {
+      width: 350px;
+    }
+    .Polaris-Label {
+      font-size: 14px;
+      line-height: 17px;
+      color: #637381;
+    }
+    .Polaris-Button {
+      margin-left: 10px;
+      @media (max-width: 540px) {
+        margin-left: 0px;
+        margin-top: 10px;
+      }
+    }
+  }
+  .block-info {
+    margin-bottom: 2rem;
+
+    .message {
+      font-size: 14px;
+      line-height: 17px;
+
+      color: #637381;
+    }
+  }
+}
+
+.headerButtonsGroup {
+  margin-top: 10px;
+  margin-left: 20px;
+  border-bottom-width: 1px;
+  border-bottom-color: #dfe3e8;
+  // justify-content: space-between;
+  display: flex;
+  margin-right: 20px;
+}
+
+.notFullWidthHr {
+  border: 0.5px solid #dfe3e8;
+  height: 1px;
+  width: 100%;
+  margin: 10px 0px 10px 0px;
+}
+
+.customFreshChatCss {
+  right: 20px !important;
+  bottom: 80px !important;
+}
+
+.tab-inspiration {
+  margin-bottom: 20px;
+  min-height: 300px;
+  padding: 30px 0px 100px 0px;
+  @media (max-width: 540px) {
+    padding: 30px 0px 100px 0px;
+  }
+}
+
+.tab-academy {
+  min-height: 300px;
+}
+
+.upgrate-modal-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 27px;
+  .title{
+    color: #212B36;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 20px;
+  }
+  .text{
+    color: #212B36;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 12px;
+    text-align: center;
+  }
+  .Polaris-Button{
+    margin-top: 28px;
+    min-width: 155px;
+  }
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+}

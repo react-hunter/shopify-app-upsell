@@ -1,0 +1,56 @@
+
+.refToStickyModalHeader {
+    position: absolute;
+    right: 6px;
+    color: white;
+}
+.refToStickyModalHeader > button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    fill: #919EAB;
+}
+
+.refToStickyModalBody {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+    height: 100%;
+    width: 400px;
+    margin: 10px auto auto auto;
+    text-align: center;
+    color: white;
+}
+
+.refToStickyModalBody > svg {
+    margin: auto;
+}
+
+.refToStickyModalBody > h2 {
+font-size: 22px;
+font-weight: 600;
+margin-top: 30px;
+color: white;
+}
+
+.refToStickyModalBody > p {
+    margin-top: 10px;
+    color: white;
+}
+
+.refToStickyModalBody > 
+.Polaris-Button--primary{
+    max-width: 155px;
+    margin: 20px auto 0px auto;
+}
+
+.reviewPromptSecondaryButton {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #5362B3;
+    margin-top: 20px;
+}
+
+.refToOtherAppStickyAppButton {
+    margin-top: 15px;
+}

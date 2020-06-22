@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="./desktop.css" />
+		<title>Document</title>
+
+		<script>
+			function renderProducts(data) {
+				document.getElementById("no-content").style.display = "none";
+				document.getElementById("has-content").style.display = "flex";
+
+				document.getElementById("loader-container").style.display = "block";
+				setTimeout(() => document.getElementById("loader-container").style.display = "none", 2000);
+
+				let product_container = document.getElementById(
+					"has-content-products-container"
+				);
+				if (data && data.length) {
+					let res = "";
+					data.map((item, index) => {
+						res += `
+							<div class="product-container">
+								<div class="product-container-col-1">
+									<div class="product-logo-container">
+										<img
+											class="col-1-logo"
+											src=${item.product_image}
+										/>
+										<span class="product-quantity">${item.quantity}</span>
+									</div>
+
+									<div class="col-1-content">
+										<div class="product-name">${item.title}</div>
+										<div class="product-variant">${item.isOneVariant ? '' : item.variants.filter(i => !!i).map((variant, index) => variant + (index != item.variants.filter(i => !!i).length-1 ? ',' : '')).join(' ')}</div>
+									</div>
+								</div>
+								<div class="product-price">${item.price} </div>
+							</div>
+						`;
+					});
+					product_container.innerHTML = res;
+				}
+			}
+
+			function hideProducts () {
+				document.getElementById("no-content").style.display = "flex";
+				document.getElementById("has-content").style.display = "none";
+			}
+
+		</script>
+	</head>
+	<body>
+		<div class="loader-container" id = "loader-container">
+				<div class="loader"></div>
+		</div>
+		<div class="desktop-no-content" id="no-content">
+			<div class="left-container">
+				<div class="left-container-row-1"></div>
+
+				<div class="left-container-row-2">
+					<div class="row-2-logo"></div>
+					<div class="row-2-content">
+						<div class="row-2-content-1"></div>
+						<div class="row-2-content-2"></div>
+					</div>
+				</div>
+				<div class="left-container-row-3"></div>
+				<div class="left-container-row-4"></div>
+				<div class="left-container-row-5"></div>
+			</div>
+
+			<div class="right-containers">
+				<div class="right-container-1-row" id="product-view">
+					<div class="right-container-1-col-1">
+						<div class="container-1-logo"></div>
+						<div class="container-1-content">
+							<div class="container-1-content-1"></div>
+							<div class="container-1-content-2"></div>
+						</div>
+					</div>
+					<div class="right-container-1-col-2"></div>
+				</div>
+				<div class="right-container-content-2">
+					<div class="content-2-row-1">
+						<div class="content-2-row-content-1 "></div>
+						<div class="content-2-row-content-2"></div>
+					</div>
+					<div class="content-2-row-2">
+						<div class="content-2-row-content-1 "></div>
+						<div class="content-2-row-content-2"></div>
+					</div>
+					<div class="content-2-row-3">
+						<div class="content-2-row-content-1 "></div>
+						<div class="content-2-row-content-2"></div>
+					</div>
+					<div class="content-2-row-4" id="price-view">
+						<div class="content-2-row-content-1 "></div>
+						<div class="content-2-row-content-2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- HAS CONTENT -->
+		<div class="desktop-has-content" id="has-content">
+			<div class="left-container">
+				<div class="has-content-row-1"></div>
+				<div class="has-content-row-2">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="has-content-row-3"></div>
+				<div class="has-content-row-4"></div>
+				<div class="has-content-row-5"></div>
+				<div class="has-content-row-6"></div>
+				<div class="has-content-row-7"></div>
+				<div class="has-content-row-8"></div>
+				<div class="has-content-row-9"></div>
+				<div class="has-content-row-10">
+					<div class="has-content-row-10-c-1"></div>
+					<div class="has-content-row-10-c-2"></div>
+				</div>
+			</div>
+
+			<div class="right-containers">
+				<div
+					class="products-container"
+					id="has-content-products-container"
+				></div>
+				<div class="right-container-content-2">
+						<div class="content-2-row-1">
+							<div class="content-2-row-content-1 "></div>
+							<div class="content-2-row-content-2"></div>
+						</div>
+						<div class="content-2-row-2">
+							<div class="content-2-row-content-1 "></div>
+							<div class="content-2-row-content-2"></div>
+						</div>
+						<div class="content-2-row-3">
+							<div class="content-2-row-content-1 "></div>
+							<div class="content-2-row-content-2"></div>
+						</div>
+						<div class="content-2-row-4">
+							<div class="content-2-row-content-1 "></div>
+							<div class="content-2-row-content-2"></div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<script>
+				window.conversionBearUpsellSettings = {
+				isDemo: true,
+				forseIsMobile: false,
+				onLoaded: function(){
+					// console.log('onLoaded')
+				},
+				getDemoCheckoutData: function(data){
+					renderProducts(data.offers.map(item => ({...item, variants: [item.option1, item.option2, item.option3]})));
+					window.parent.showButtonRefresh('desktop');
+				}
+			}
+
+			var campaign = localStorage.getItem('upsellCampaing') ? JSON.parse(localStorage.getItem('upsellCampaing')) : null;
+
+			if (campaign && campaign.trigger != 'trigger_all' && campaign.trigger !== 'trigger_amount') {
+				document.getElementById('loader-container').style.display = 'block';
+				fetch('/default/demo_campaign_product_preview', {
+					method: 'post',
+					headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+					body: localStorage.getItem('upsellCampaing')
+				}).then(function(res) {
+					return res.json();
+				}).then(function(result) {
+					if(!result){
+						return;
+					}
+
+
+					var product_container = document.getElementById("product-view");
+					product_container.style.display = "flex";
+
+					var currecy_format = localStorage.getItem('upsellShopCurrencyFormat') || '${{amount}}';
+
+					product_container.innerHTML = `
+							<div class="product-container">
+								<div class="product-container-col-1">
+									<div class="product-logo-container">
+										<img
+											class="col-1-logo"
+											src=${result.image.src}
+										/>
+										<span class="product-quantity">1</span>
+									</div>
+
+									<div class="col-1-content">
+										<div class="product-name">${result.title}</div>
+										<div class="product-variant">${result.variants.length == 1 ? '' : (result.variants[0].option1 || '') + ( result.variants[0].option2 && ', ' + result.variants[0].option2 || '') + ( result.variants[0].option3 && ', ' + result.variants[0].option3 || '')}</div>
+									</div>
+								</div>
+								<div class="product-price">${currecy_format.replace(/\{\{.*?\}\}/, result.variants[0].price).replace(/<[^>]*>/g, '')}</div>
+							</div>
+						`
+
+
+					document.getElementById('loader-container').style.display = 'none'
+					var script = document.createElement("script");
+					script.type = "text/javascript";
+					script.src = "/script" + window.location.search;
+					document.body.appendChild(script);
+				})
+			} else {
+
+				if (campaign && campaign.trigger == 'trigger_amount') {
+					var product_container = document.getElementById("price-view");
+					product_container.style.display = "flex";
+
+					var currecy_format = localStorage.getItem('upsellShopCurrencyFormat') || '${{amount}}';
+					var amount = !isNaN(parseFloat(campaign.trigger_amount)) ? parseFloat(campaign.trigger_amount).toFixed(2) : '58.00'
+					product_container.innerHTML = `
+							<div class="product-container">
+								<div class="product-container-col-1">
+									<div class="col-1-content">
+										<div class="product-name">Total</div>
+									</div>
+								</div>
+								<div class="product-price">${currecy_format.replace(/\{\{.*?\}\}/,amount ).replace(/<[^>]*>/g, '')}</div>
+							</div>
+						`
+				}
+
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				script.src = "/script" + window.location.search;
+				document.body.appendChild(script);
+			}
+				
+		</script>
+	</body>
+</html>

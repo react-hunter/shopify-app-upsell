@@ -1,0 +1,109 @@
+.AddUpsellOffers{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  padding-bottom: 0;
+  color: white;
+  .preview{
+    display: flex;
+    cursor: pointer;
+    font-size: 1.6rem;
+    line-height: 1.7rem;
+    font-weight: 600;
+    align-items: center;
+    .Polaris-Icon{
+      margin-left: 0.8rem;
+      // display: flex;
+      color: white;
+      fill: white;
+    }
+  }
+  .Polaris-Heading{
+    color: white;
+    margin-bottom: 2rem;
+  }
+  p{
+    color: white;
+    margin-bottom: 2rem;
+  }
+  .new-offer{
+    background: #FFFFFF;
+    border-radius: 3px;
+    border: 1px solid #C8D0D8;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    p{
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      line-height: 17px;
+      margin-left: 8px;
+      color: #5C6AC4;
+      
+    }
+  }
+  .Offer{
+    background: #FFFFFF;
+    border: 1px solid #C8D0D8;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+    position: relative;
+    .offer-name-item{
+      background: #F4F6F8;
+      border-radius: 2px;
+      color: #919EAB;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      padding: 7px 0;
+      min-width: 85px;
+      text-align: center;
+    }
+    .Polaris-TextField{
+      max-width: 53.8rem;
+    }
+    .Polaris-Stack{
+      color: #212B36;
+    }
+    .delete-action{
+      position: absolute;
+      right: 1.8rem;
+      cursor: pointer;
+    }
+    .count-block{
+      .count{
+        width: 2.9rem;
+        height: 2.9rem;
+        border-radius: 50%;
+        background: linear-gradient(131.87deg, #FFC003 11.18%, #FFD001 78.38%);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+      } 
+    }
+    .content-block{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      color: #212B36;
+      .Polaris-Heading{
+        color: #212B36;
+      }
+      p{
+        color: #637381;
+      }
+    }
+  }
+}

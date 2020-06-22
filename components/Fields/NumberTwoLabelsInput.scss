@@ -1,0 +1,13 @@
+.NumberTwoLabelsInput{
+  .input{
+    width: 60px; 
+    margin: 0 10px;
+    .Polaris-Labelled__Error{
+      display: none;
+    }
+  }
+  .input-block{
+    display: flex; 
+    align-items: center;
+  }
+}

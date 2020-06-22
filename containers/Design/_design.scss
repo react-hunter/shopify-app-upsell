@@ -1,0 +1,44 @@
+.tab-design{
+
+  .gray-color-lable{
+    label{
+      color: #637381;
+    }
+  }
+
+  .Polaris-Layout{
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 3.2rem;
+    margin-bottom: 10.9rem;
+    @media (max-width: 540px) {
+      flex-flow: column-reverse;
+    }
+    .col-1{
+      display: flex;
+      flex-direction: column;
+      width: 23rem;
+      @media (max-width: 540px) {
+        width: 100%;
+      }
+      .Polaris-Card{
+        width: 100%;
+      }
+    }
+    .col-2{
+      flex: auto;
+      display: flex;
+      align-items: flex-start;
+      // background: green
+      margin-left: 3.2rem;
+    }
+  }
+  .item-theme{
+    margin-top: 1rem;
+    cursor: pointer;
+    @media (max-width: 540px) {
+      text-align: center;
+    }
+  }
+}

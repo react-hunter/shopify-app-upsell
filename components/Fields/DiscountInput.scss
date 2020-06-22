@@ -1,0 +1,21 @@
+.DiscountInput{
+  .input{
+    // width: 60px;
+    margin: 0 10px;
+    .Polaris-Labelled__Error{
+      display: none;
+    }
+    display: flex;
+    .Polaris-TextField{
+      width: 80px;
+      text-align: right;
+    }
+    .Polaris-Select{
+      margin-left: -2px;
+    }
+  }
+  .input-block{
+    display: flex; 
+    align-items: center;
+  }
+}

@@ -1,0 +1,54 @@
+.UpgrateButton{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex: auto;
+  margin-left: 20px;
+  margin-right: 15px;
+  .counter{
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    
+    .container-progress{
+      clip-path: inset(0 0 0 0 round 6px 6px 6px 6px);
+      height: 12px;
+      background: #FFFFFF;
+      border: 1px solid #DFE3E8;
+      border-radius: 5px;
+      
+      .progress{
+        height: 10px;
+        width: 10%;
+        background: linear-gradient(90deg, #FFA801 0%, #FFC601 106.38%);
+        clip-path: inset(0 0 0 0 round 6px 6px 6px 6px );
+        &.bg-red{
+          background: #DE3618;
+        }
+      }
+    }
+    .text{
+      font-size: 14px;
+      line-height: 17px;
+      color: #637381;
+      margin-top: 2px;
+    }
+  }
+  .Polaris-Button{ 
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFC101;
+    border: 1px solid #FFC601;
+    margin-left: 20px;
+    .Polaris-Button__Text {
+      font-weight: bold;
+    }
+  }
+  &.bg-btn{
+    .Polaris-Button{ 
+      background: linear-gradient(107.64deg, #FFA601 0%, #FFC801 100%);
+      color: #FFFFFF;
+    }
+  } 
+}

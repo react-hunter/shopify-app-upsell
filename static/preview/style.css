@@ -1,0 +1,262 @@
+html {
+    /* Load system fonts */
+    font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  
+    /* Make type rendering look crisper */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Disable auto-enlargement of small text in Safari */
+    text-size-adjust: 100%;
+  
+    /* Enable kerning and optional ligatures */
+    text-rendering: optimizeLegibility;
+    height: 100%;
+}
+
+body {
+    background: #f4f6f8;
+    margin: 0;
+    color: #212B36;
+    height: calc(100% - 87px);
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.header-title{
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.top-header {
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+    /* height: 120px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+
+}
+@media(max-width: 540px) {
+    .top-header {
+        display: none;
+    }
+  }
+
+.top-header p {
+    margin: 0;
+}
+
+.top-header .top-header-titles-container svg{
+    margin-right: 10px;
+}
+.top-header .top-header-titles-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-header .header-title {
+    font-size: 16px;
+    line-height: 19px;
+    color: #212B36;
+    font-weight: 600;
+}
+
+.top-header .header-description {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.device-switchers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.device-switchers div {
+    width: 125px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.device-switchers div span {
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 4px;
+}
+
+.switch-to-desktop {
+    border-radius: 4px 0 0 4px;
+}
+
+.device-switchers svg {
+    margin-right: 12px;
+}
+
+.switch-to-mobile {
+    border-radius: 0 4px 4px 0;
+}
+
+.desktop-container{
+    margin-top: 87px;
+    height: 100%;
+}
+
+.device-switchers div {
+    border: 1px solid #C4CDD5;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);
+    cursor: pointer;
+}
+
+.device-switchers .active {
+    background: linear-gradient(180deg, #606FC7 0%, #5865C1 100%);
+    color: #FFFFFF;
+    border: 1px solid #4F5DBA;
+}
+
+.device-switchers svg {
+    color: black;
+    stroke: black;
+}
+
+.device-switchers svg rect {
+    color: black;
+    stroke: black;
+}
+
+.device-switchers .active svg {
+    color: white;
+    stroke: white;
+}
+
+.device-switchers .active svg path {
+    fill: white;
+}
+
+.device-switchers .active svg rect {
+    color: white;
+    stroke: white;
+}
+
+.bottom-header {
+    background: #F0FAFA;
+    height: 44px;
+    width: 100%;
+    border-bottom: 1px solid #E6E6E6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    box-sizing: border-box;
+}
+
+.bottom-header div {
+    display: flex;
+    align-items: center;
+}
+
+.header-description-restar{
+    font-size: 14px;
+}
+
+.header-description-restar .clear-button {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #5e6dc6;
+}
+
+.bottom-header span {
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.mobile-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    /* margin-bottom: 50px; */
+    margin-top: 87px;
+    height: calc(100vh - 140px);
+    align-items: center;
+}
+
+.mobile-show {
+    width: 360px;
+    background: #FFFFFF;
+    border: 2px solid #F7F8FA;
+    /* border-radius: 35px; */
+    display: flex;
+    height: 100%;
+    max-height: 714px;
+}
+
+.mobile-header {
+    height: 61px;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-header-camera {
+    width: 18px;
+    height: 18px;
+    background: #E1E5F1;
+    border-radius: 50%;
+    margin-left: 46px;
+}
+
+.mobile-header-microphone {
+    width: 154px;
+    height: 10px;
+    background: #E1E5F1;
+    border-radius: 5px;
+    margin-left: 62px;
+}
+
+.mobile-content {
+    width: 360px;
+    max-height: 714px;
+    height: 100%;
+    background: #FFFFFF;
+    border: 2px solid #F4F6F8;
+    box-sizing: border-box;
+    /* margin: 0 16px; */
+}
+
+.mobile-bottom-microphone {
+    width: 153px;
+    height: 10px;
+    background: #E1E5F1;
+    border-radius: 5px;
+    margin: 18px auto;
+}
+
+.hide {
+    display: none;
+}
+
+.customFreshChatCss {
+    left: 20px !important;
+}
+
+@media(max-width: 540px) {
+    .customFreshChatCss {
+        display: none !important;
+    }
+  }

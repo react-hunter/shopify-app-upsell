@@ -1,0 +1,23 @@
+.TimerInput{
+  .Polaris-Label{
+    margin-bottom: 0.4rem;
+  }
+  .input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .points{
+      margin: 0 0.9rem;
+    }
+    .input-item{
+      width: 3.6rem;
+    }
+    .Polaris-Labelled__Error{
+      display: none;
+    }
+    .input-item + .input-item{
+      margin-left: 0.9rem;
+    }
+  }
+}

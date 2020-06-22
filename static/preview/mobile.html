@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="./mobile.css" />
+
+		<title>Document</title>
+
+		<script>
+			function renderProducts(data) {
+				console.log("TCL: renderProducts -> data", data)
+				
+				document.getElementById("loader-container").style.display = "block";
+				setTimeout(() => document.getElementById("loader-container").style.display = "none", 2000);
+				document.getElementById("hide-1").style.display = "none";
+				document.getElementById("hide-2").style.display = "none";
+
+				let product_container = document.getElementById("show-1");
+				product_container.style.display = "flex";
+				if (data && data.length) {
+					let res = "";
+					data.map((item, index) => {
+						res += `
+							<div class="product-container">
+								<div class="product-container-col-1">
+									<div class="product-logo-container">
+										<img
+											class="col-1-logo"
+											src=${item.product_image}
+										/>
+										<span class="product-quantity">${item.quantity}</span>
+									</div>
+
+									<div class="col-1-content">
+										<div class="product-name">${item.title}</div>
+										<div class="product-variant">${item.isOneVariant ? '' : item.variants.filter(i => !!i).map((variant, index) => variant + (index != item.variants.filter(i => !!i).length-1 ? ',' : '')).join(' ')} </div>
+									</div>
+								</div>
+								<div class="product-price">${item.price}</div>
+							</div>
+						`;
+					});
+					product_container.innerHTML = res;
+				}
+			}
+
+			function hideProducts() {
+				document.getElementById("hide-1").style.display = "flex";
+				document.getElementById("hide-2").style.display = "flex";
+				document.getElementById("show-1").style.display = "none";
+			}
+		</script>
+	</head>
+	<body>
+		<div class="hide loader-container" id = "loader-container">
+			<div class="loader"></div>
+		</div>
+		<div class="iframe-row-1"><div></div></div>
+		<div class="iframe-row-2" id="hide-1">
+			<div class="iframe-row-2-content-big"></div>
+			<div class="iframe-row-2-content-small"></div>
+		</div>
+		<div class="iframe-row-3" id="hide-2">
+			<div class="iframe-row-3-content-1"></div>
+			<div id="product-view" style="margin-top: 20px;"></div>
+			<div class="iframe-row-3-content-2"></div>
+			<div class="iframe-row-3-content-3"></div>
+		</div>
+
+		<div class="iframe-row-with-content" id="show-1"></div>
+
+		<div id="show-2">
+			<div class="rectangles-container" id="rectangle-container">
+				<div class="content-2-row-1">
+					<div class="content-2-row-content-1 "></div>
+					<div class="content-2-row-content-2"></div>
+				</div>
+				<div class="content-2-row-2">
+					<div class="content-2-row-content-1 "></div>
+					<div class="content-2-row-content-2"></div>
+				</div>
+				<div class="content-2-row-3">
+					<div class="content-2-row-content-1 "></div>
+					<div class="content-2-row-content-2"></div>
+				</div>
+				<div class="content-2-row-4">
+					<div class="content-2-row-content-1 "></div>
+					<div class="content-2-row-content-2"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="show-3">
+			<div class="rectangle-bottom-1"></div>
+			<div class="rectangle-bottom-2"></div>
+		</div>
+		<script>
+			window.conversionBearUpsellSettings = {
+				isDemo: true,
+				forseIsMobile: true,
+				onLoaded: function(){
+					// console.log('onLoaded')
+				},
+				getDemoCheckoutData: function(data){
+					renderProducts(data.offers.map(item => ({...item, variants: [item.option1, item.option2, item.option3]})));
+					window.parent.showButtonRefresh('mobile');
+				}
+			}
+
+			var campaign = localStorage.getItem('upsellCampaing') ? JSON.parse(localStorage.getItem('upsellCampaing')) : null;
+
+			if (campaign && campaign.trigger != 'trigger_all' && campaign.trigger !== 'trigger_amount') {
+				document.getElementById('loader-container').style.display = 'block';
+				fetch('/default/demo_campaign_product_preview', {
+					method: 'post',
+					headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+					body: localStorage.getItem('upsellCampaing')
+				}).then(function(res) {
+					return res.json();
+				}).then(function(result) {
+					if(!result){
+						return;
+					}
+
+
+					var product_container = document.getElementById("product-view");
+					product_container.style.display = "flex";
+
+					var currecy_format = localStorage.getItem('upsellShopCurrencyFormat') || '${{amount}}';
+
+					product_container.innerHTML = `
+							<div class="product-container">
+								<div class="product-container-col-1">
+									<div class="product-logo-container">
+										<img
+											class="col-1-logo"
+											src=${result.image.src}
+										/>
+										<span class="product-quantity">1</span>
+									</div>
+
+									<div class="col-1-content">
+										<div class="product-name">${result.title}</div>
+										<div class="product-variant">${result.variants.length == 1 ? '' : (result.variants[0].option1 || '') + ( result.variants[0].option2 && ', ' + result.variants[0].option2 || '') + ( result.variants[0].option3 && ', ' + result.variants[0].option3 || '')}</div>
+									</div>
+								</div>
+								<div class="product-price">${currecy_format.replace(/\{\{.*?\}\}/, result.variants[0].price).replace(/<[^>]*>/g, '')}</div>
+							</div>
+						`
+
+
+					document.getElementById('loader-container').style.display = 'none'
+					var script = document.createElement("script");
+					script.type = "text/javascript";
+					script.src = "/script" + window.location.search;
+					document.body.appendChild(script);
+				})
+			} else {
+
+				if (campaign && campaign.trigger == 'trigger_amount') {
+					var product_container = document.getElementById("product-view");
+					product_container.style.display = "flex";
+
+					var currecy_format = localStorage.getItem('upsellShopCurrencyFormat') || '${{amount}}';
+					var amount = !isNaN(parseFloat(campaign.trigger_amount)) ? parseFloat(campaign.trigger_amount).toFixed(2) : '58.00'
+					product_container.innerHTML = `
+							<div class="product-container">
+								<div class="product-container-col-1">
+									<div class="col-1-content">
+										<div class="product-name">Total</div>
+									</div>
+								</div>
+								<div class="product-price">${currecy_format.replace(/\{\{.*?\}\}/,amount ).replace(/<[^>]*>/g, '')}</div>
+							</div>
+						`
+				}
+
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				script.src = "/script" + window.location.search;
+				document.body.appendChild(script);
+			}
+		</script>
+	</body>
+</html>

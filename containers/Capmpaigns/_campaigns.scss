@@ -1,0 +1,288 @@
+.modal-content-video {
+  width: 100%;
+  height: 360px;
+  background: black;
+  margin-top: 20px;
+}
+.modal-content-delete {
+  padding: 20px;
+  p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+    color: #212b36;
+    margin-bottom: 2rem;
+  }
+  .actions {
+    display: flex;
+    justify-content: center;
+    .Polaris-Button + .Polaris-Button {
+      margin-left: 2rem;
+    }
+    .Polaris-Button:last-child {
+      background: linear-gradient(180deg, #e33719 0%, #d63418 100%);
+      color: white;
+      border: 0.1rem solid #e33719;
+    }
+  }
+}
+
+.StartCampaign {
+  // background: linear-gradient(180deg, #212d3a 0%, #0c4687 100%);
+  min-height: 400px;
+  display: flex;
+  // color: white;
+  justify-content: center;
+  position: relative;
+  #startCampaignVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: none;
+  }
+  .block-content {
+    margin: 70px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .hand {
+      position: absolute;
+      right: 0;
+      top: -35px;
+    }
+    .play {
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+    h1 {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      text-align: center;
+      @media (max-width: 540px) {
+        margin: 0.8rem 1.6rem;
+      }
+    }
+    h2 {
+      margin-bottom: 2rem;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      max-width: 28.2rem;
+      text-align: center;
+    }
+    // min-width: 387px;
+
+    .upsell-rev-ticker-tile{
+      width: 213px;
+      height: 121px;
+      background: #FFFFFF;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+      border-radius: 10px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    .upsell-rev-ticker-number{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 43px;
+      text-align: center;
+      color: #212B36;
+      margin-top: auto;
+      margin-bottom: 7px;
+    }
+    .upsell-rev-ticker-description{
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #637381;
+      margin-top: 7px;
+      margin-bottom: auto;
+    }
+  }
+}
+
+.tab-campaigns {
+  width: 100%;
+  display: flex;
+  background: #ffffff;
+  padding: 3rem 2rem;
+  flex-direction: column;
+  .text-placement{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    padding: 0.6rem;
+    background: #F4F6F8;
+    border-radius: 2px;
+    color: #919EAB;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    .Polaris-Icon{
+      margin-right: 0.4rem;
+      color: #919EAB;
+      height: 1.4rem;
+      width: 1.4rem;
+      svg{
+        fill: #919EAB;
+      }
+    }
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .Polaris-DisplayText {
+      margin-left: 1.3rem;
+    }
+    .title {
+      color: #212b36;
+      font-size: 2.8rem;
+      line-height: 3.3rem;
+      margin-left: 1.3rem;
+    }
+  }
+  .body {
+    border: none;
+    @media (max-width: 540px) {
+      display: block;
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      td {
+        border: none;
+        border-bottom: 1px solid #dfe3e8;
+        text-align: left;
+        padding: 1.6rem 1.3rem;
+        color: #212b36;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+
+        .actions {
+          display: flex;
+          justify-content: flex-end;
+          margin-right: 2rem;
+          .icon-action {
+            cursor: pointer;
+          }
+          .icon-action + .icon-action {
+            margin-left: 0.9rem;
+            cursor: pointer;
+          }
+          span + span {
+            margin-left: 0.9rem;
+          }
+        }
+      }
+      th {
+        border-bottom: 1px solid #dfe3e8;
+        padding: 2rem 1.3rem;
+        text-align: left;
+        color: #637381;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+      }
+    }
+  }
+  .baner {
+    margin-top: 2rem;
+    background: linear-gradient(104.02deg, #320084 -0.33%, #d000af 93.84%);
+    min-height: 10rem;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    padding-right: 2rem;
+
+    .img {
+      display: flex;
+      align-items: flex-end;
+    }
+    .description {
+      display: flex;
+      flex: auto;
+      color: white;
+      flex-direction: column;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      .title {
+        color: #ffffff;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    @media (max-width: 540px) {
+      flex-direction: column;
+      padding: 2rem;
+      text-align: center;
+      .description{
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.playButtonWithGifContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  height: 147px;
+  width: 147px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  // img {
+  //   position: absolute;
+  //   top: 0px;
+  //   left: 0px;
+  //   display: block;
+  // }
+
+  .playingGif{
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    position: absolute;
+    z-index: 3;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+  }
+
+  .play1 {
+    position: absolute;
+    z-index: 4;
+    top: 0px;
+    left: 0px;
+    display: block;
+  }
+  .play3 {
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+  }
+}
+
+
+
+

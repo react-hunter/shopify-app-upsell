@@ -1,0 +1,97 @@
+.BarPreview{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: calc(100vh - 276px);
+  position: sticky;
+  top: 2rem;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+  min-height: 464px;
+  .controll{
+    p{
+      color: #637381;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .link{
+    display: flex;
+    align-items: center;
+    color: #212B36;
+    font-size: 14px;
+    line-height: 17px;
+    a{
+      margin-left: 1rem;
+      fill: #007ACE;
+    }
+  }
+  .preview_full{
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+  .Mobile{
+    max-width: 34.3rem;
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    height: 100%;
+    max-height: 71.79rem;
+
+    .Mobile-content-mobile-block{
+      width: 100%;
+      display: flex;
+      background: white;
+      border: 2px solid #F7F8FA;
+      border-radius: 2.5rem;
+      padding: 0 0.7rem;
+      flex-direction: column;
+      box-sizing: border-box;
+      .Mobile-content-mobile-header{
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .mic{
+          width: 7.57rem;
+          height: 0.469rem;
+          background: #E1E5F1;
+          border-radius: 1rem;
+        }
+        .cam{
+          position: absolute;
+          height: 0.86rem;
+          width: 0.86rem;
+          background: #E1E5F1;
+          border-radius: 50%;
+          left: 2.2rem;
+        }
+      }
+      .Mobile-content-mobile-body{
+        width: 100%;
+        border: 0.2rem solid #F4F6F8;
+        display: flex;
+        flex: auto;
+        // height: 44.6rem;
+        position: relative;
+      }
+      .Mobile-content-mobile-footer{
+        height: 2.18rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .mic{
+          width: 7.5rem;
+          height: 0.469rem;
+          background: #E1E5F1;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}

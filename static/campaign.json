@@ -1,0 +1,352 @@
+{
+	"_id": "5daed3216b5a08094c1edb81",
+	"trigger": "trigger_products",
+	"name": "Ultimate Upsell #1",
+	"offers": [
+		{
+			"_id": "5daed3216b5a08094c1edb82",
+			"product": {
+				"_id": "5daed3216b5a08094c1edb83",
+				"id": 3689762029668,
+				"title": "Ultimate Dog Leash",
+				"body_html": "Our Ultimate Dog Leash is a must have for your dog. This leash will keep your dog safe at night. Our Leashes are made from the same leather material used by safety professionals and are easy cleanbale. These leashes are great for dogs who love to be outdoors.",
+				"variants": [
+					{
+						"id": 1,
+						"product_id": 3689762029668,
+						"title": "Ultimate Dog Leash",
+						"price": "12.45",
+						"compare_at_price": "16.00",
+						"option1": "Yellow",
+						"option2": "Large",
+						"option3": null
+					},
+					{
+						"id": 2,
+						"product_id": 3689762029668,
+						"title": "Ultimate Dog Leash",
+						"price": "12.45",
+						"compare_at_price": "16.00",
+						"option1": "Yellow",
+						"option2": "Medium",
+						"option3": null
+					},
+					{
+						"id": 3,
+						"product_id": 3689762029668,
+						"title": "Ultimate Dog Leash",
+						"price": "12.45",
+						"compare_at_price": "16.00",
+						"option1": "Yellow",
+						"option2": "Small",
+						"option3": null
+					},
+					{
+						"id": 4,
+						"product_id": 3689762029668,
+						"title": "Ultimate Dog Leash",
+						"compare_at_price": "16.00",
+						"price": "12.45",
+						"option1": "Red",
+						"option2": "Large",
+						"option3": null
+					},
+					{
+						"id": 5,
+						"product_id": 3689762029668,
+						"title": "Ultimate Dog Leash",
+						"compare_at_price": "16.00",
+						"price": "12.45",
+						"option1": "Red",
+						"option2": "Medium",
+						"option3": null
+					},
+					{
+						"id": 6,
+						"product_id": 3689762029668,
+						"title": "Ultimate Dog Leash",
+						"compare_at_price": "16.00",
+						"price": "12.45",
+						"option1": "Red",
+						"option2": "Small",
+						"option3": null
+					},
+					{
+						"id": 7,
+						"product_id": 3689762029668,
+						"title": "Ultimate Dog Leash",
+						"compare_at_price": "16.00",
+						"price": "12.45",
+						"option1": "Blue",
+						"option2": "Large",
+						"option3": null
+					},
+					{
+						"id": 8,
+						"product_id": 3689762029668,
+						"title": "Ultimate Dog Leash",
+						"compare_at_price": "16.00",
+						"price": "12.45",
+						"option1": "Blue",
+						"option2": "Medium",
+						"option3": null
+					},
+					{
+						"id": 9,
+						"product_id": 3689762029668,
+						"title": "Ultimate Dog Leash",
+						"compare_at_price": "16.00",
+						"price": "12.45",
+						"option1": "Blue",
+						"option2": "Small",
+						"option3": null
+					}
+				],
+				"options": [
+					{
+						"id": 4878741405796,
+						"product_id": 3689762029668,
+						"name": "Color",
+						"position": 1,
+						"values": ["Yellow", "Red", "Blue"]
+					},
+					{
+						"id": 4878741405796,
+						"product_id": 3689762029668,
+						"name": "Size",
+						"position": 1,
+						"values": ["Large", "Medium", "Small"]
+					}
+				],
+				"images": [
+					{
+						"src": "/static/images/products/product1_image1.png"
+					},
+					{
+						"src": "/static/images/products/product1_image2.png"
+					},
+					{
+						"src": "/static/images/products/product1_image3.png"
+					}
+				]
+			},
+			"upsell_type": "discount",
+			"limit_products_amount": 1,
+			"limit_products": false,
+			"offer_text": "Deal unlocked! Get this product for 20% off",
+			"discount": {
+				"amount": 12.45,
+				"discount_type": "fixed_price"
+			}
+		},
+		{
+			"_id": "5daed3216b5a08094c1edb83",
+			"product": {
+				"_id": "5daed3216b5a08094c1edb83",
+				"id": 3689762029669,
+				"title": "Ultimate Dog Bed",
+				"body_html": "Our Ultimate Dog Bed is a must have for your dog. This bed would help your dog enjoy a proper night sleep. Our beds are made from eco friendly material used by safety professionals and are easy cleanbale. These beds are great for dogs who love to be outdoors.",
+				"variants": [
+					{
+						"id": 21,
+						"product_id": 3689762029669,
+						"title": "Ultimate Dog Bed",
+						"price": "52.50",
+						"option1": "Black",
+						"option2": "Large",
+						"option3": null
+					},
+					{
+						"id": 22,
+						"product_id": 3689762029669,
+						"title": "Ultimate Dog Bed",
+						"price": "52.50",
+						"option1": "Black",
+						"option2": "Medium",
+						"option3": null
+					},
+					{
+						"id": 23,
+						"product_id": 3689762029669,
+						"title": "Ultimate Dog Bed",
+						"price": "52.50",
+						"option1": "Black",
+						"option2": "Small",
+						"option3": null
+					},
+					{
+						"id": 24,
+						"product_id": 3689762029669,
+						"title": "Ultimate Dog Bed",
+						"price": "52.50",
+						"option1": "Green",
+						"option2": "Large",
+						"option3": null
+					},
+					{
+						"id": 25,
+						"product_id": 3689762029669,
+						"title": "Ultimate Dog Bed",
+						"price": "52.50",
+						"option1": "Green",
+						"option2": "Medium",
+						"option3": null
+					},
+					{
+						"id": 26,
+						"product_id": 3689762029669,
+						"title": "Ultimate Dog Bed",
+						"price": "52.50",
+						"option1": "Green",
+						"option2": "Small",
+						"option3": null
+					},
+					{
+						"id": 27,
+						"product_id": 3689762029669,
+						"title": "Ultimate Dog Bed",
+						"price": "52.50",
+						"option1": "White",
+						"option2": "Large",
+						"option3": null
+					},
+					{
+						"id": 28,
+						"product_id": 3689762029669,
+						"title": "Ultimate Dog Bed",
+						"price": "52.50",
+						"option1": "White",
+						"option2": "Medium",
+						"option3": null
+					},
+					{
+						"id": 29,
+						"product_id": 3689762029669,
+						"title": "Ultimate Dog Bed",
+						"price": "52.50",
+						"option1": "White",
+						"option2": "Small",
+						"option3": null
+					}
+				],
+				"options": [
+					{
+						"id": 4878741405796,
+						"product_id": 3689762029669,
+						"name": "Color",
+						"position": 1,
+						"values": ["Black", "Green", "White"]
+					},
+					{
+						"id": 4878741405796,
+						"product_id": 3689762029669,
+						"name": "Size",
+						"position": 1,
+						"values": ["Large", "Medium", "Small"]
+					}
+				],
+				"images": [
+					{
+						"src": "/static/images/products/product2_image1.png"
+					},
+					{
+						"src": "/static/images/products/product2_image2.png"
+					},
+					{
+						"src": "/static/images/products/product2_image3.png"
+					}
+				]
+			},
+			"upsell_type": "discount",
+			"limit_products_amount": 1,
+			"limit_products": false,
+			"offer_text": "Today only! Free shipping on our Dog Bed",
+			"discount": {
+				"amount": 12.45,
+				"discount_type": "fixed_price"
+			}
+		},
+		{
+			"_id": "5daed3216b5a08094c1edb83",
+			"product": {
+				"_id": "5daed3216b5a08094c1edb83",
+				"id": 3689762029670,
+				"title": "Ultimate Dog Snack",
+				"body_html": "Our Ultimate Dog Snack is a must have for your dog. This snack will keep your dog energized and healthy. Organic peanut butter, organic oat flour, organic oats, organic peanut flour, organic molasses..that's it! No Added: Sugar, salt, preservatives, artificial colors or flavors.",
+				"variants": [
+					{
+						"id": 31,
+						"product_id": 3689762029670,
+						"title": "Ultimate Dog Snack",
+						"price": "2.50",
+						"compare_at_price": "3.00",
+						"option1": "20pcs",
+						"option2": null,
+						"option3": null
+					}, {
+						"id": 32,
+						"product_id": 3689762029670,
+						"title": "Ultimate Dog Snack",
+						"price": "2.50",
+						"compare_at_price": "3.00",
+						"option1": "40pcs",
+						"option2": null,
+						"option3": null
+					},{
+						"id": 33,
+						"product_id": 3689762029670,
+						"title": "Ultimate Dog Snack",
+						"price": "2.50",
+						"compare_at_price": "3.00",
+						"option1": "100pcs",
+						"option2": null,
+						"option3": null
+					},{
+						"id": 34,
+						"product_id": 3689762029670,
+						"title": "Ultimate Dog Snack",
+						"price": "2.50",
+						"compare_at_price": "3.00",
+						"option1": "200pcs",
+						"option2": null,
+						"option3": null
+					}
+				],
+				"options": [
+					{
+						"id": 4878741405796,
+						"product_id": 3689762029670,
+						"name": "Pack Size",
+						"position": 1,
+						"values": ["20pcs", "40pcs", "100pcs", "200pcs"]
+					}
+				],
+				"images": [
+					{
+						"src": "/static/images/products/product3_image1.png"
+					}
+				]
+			},
+			"upsell_type": "discount",
+			"limit_products_amount": 1,
+			"limit_products": false,
+			"offer_text": "The ultimate dog snack",
+			"discount": {
+				"amount": 2.50,
+				"discount_type": "fixed_price"
+			}
+		}
+	],
+	"show_campaign_only": "both",
+	"skip_offers_already_icluded": false,
+	"start_time": false,
+	"end_time": false,
+	"trigger_products": [{
+		"_id": "5daed3216b5a08094c1edb84",
+		"id": 1828338630771.0,
+		"title": "Hot Wheels Corkscrew Crash Track Set"
+	}],
+	"shopId": "5d136117a56c4027d082f955",
+	"trigger_collections": [],
+	"isActive": true
+}

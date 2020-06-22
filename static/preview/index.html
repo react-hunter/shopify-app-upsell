@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="/static/preview/style.css" />
+        <link rel="shortcut icon" type="image/png" href="/static/images/favicon.png"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="/static/preview/action.js"></script>
+        <script id='amplitude'>
+                    (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script");r.type="text/javascript";
+            r.async=true;r.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-3.4.0-min.gz.js";
+            r.onload=function(){e.amplitude.runQueuedFunctions()};var i=t.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(r,i);function s(e,t){e.prototype[t]=function(){this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+            return this}}var o=function(){this._q=[];return this};var a=["add","append","clearAll","prepend","set","setOnce","unset"];
+            for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[];return this;
+            };var p=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"];
+            for(var l=0;l<p.length;l++){s(c,p[l])}n.Revenue=c;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","logEventWithTimestamp","logEventWithGroups"];
+            function v(e){function t(t){e[t]=function(){e._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+            }}for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){e=(!e||e.length===0?"$default_instance":e).toLowerCase();
+            if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]};e.amplitude=n;
+            })(window,document);
+            
+            window.addEventListener('load', function() {
+                var amplitudeApiKey = "";
+            if(window.location.host.includes('ngrok')){ //dev
+                amplitudeApiKey = '2c10e22f8d3421b66e45d9940a009bb4';
+            } else { //prod
+                amplitudeApiKey = '90363e9908fde9aab12111a731112742';
+            }
+            amplitude.getInstance().init(amplitudeApiKey);
+            amplitude.getInstance().logEvent('page_load',{value: 'preview'});
+            })
+            
+        </script>
+        <script>
+            function initFreshChat() {
+              window.fcWidget.init({
+                token: "d8dad34b-6ddb-43b8-922e-65d42473698a",
+                host: "https://wchat.freshchat.com",
+                siteId: "Honeycomb Upsell",
+                config:{
+                    cssNames:{
+                        widget: "customFreshChatCss",
+                        modal: "customModalCss"
+                    }
+                }
+              });
+            }
+            function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+          </script>
+        <title>Preview</title>
+        <script>
+            var shop = '{{__SHOP_NAME__}}';
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="top-header">
+                <div class="top-header-titles-container">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 28C21.732 28 28 21.732 28 14C28 6.26801 21.732 0 14 0C6.26801 0 0 6.26801 0 14C0 21.732 6.26801 28 14 28Z" fill="#B7ECEC"/>
+                        <path d="M14 23C18.9706 23 23 18.9706 23 14C23 9.02944 18.9706 5 14 5C9.02944 5 5 9.02944 5 14C5 18.9706 9.02944 23 14 23Z" fill="white"/>
+                        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="20" height="20">
+                        <path d="M14 4C8.486 4 4 8.486 4 14C4 19.514 8.486 24 14 24C19.514 24 24 19.514 24 14C24 8.486 19.514 4 14 4ZM14 22C9.589 22 6 18.411 6 14C6 9.589 9.589 6 14 6C18.411 6 22 9.589 22 14C22 18.411 18.411 22 14 22ZM15 17V14C15 13.447 14.552 13 14 13H13C12.448 13 12 13.447 12 14C12 14.553 12.448 15 13 15V18C13 18.553 13.448 19 14 19H15C15.552 19 16 18.553 16 18C16 17.447 15.552 17 15 17ZM14 11.0996C14.607 11.0996 15.1 10.6076 15.1 9.9996C15.1 9.3926 14.607 8.9006 14 8.9006C13.393 8.9006 12.9 9.3926 12.9 9.9996C12.9 10.6076 13.393 11.0996 14 11.0996Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                        <path d="M14 4C8.486 4 4 8.486 4 14C4 19.514 8.486 24 14 24C19.514 24 24 19.514 24 14C24 8.486 19.514 4 14 4ZM14 22C9.589 22 6 18.411 6 14C6 9.589 9.589 6 14 6C18.411 6 22 9.589 22 14C22 18.411 18.411 22 14 22ZM15 17V14C15 13.447 14.552 13 14 13H13C12.448 13 12 13.447 12 14C12 14.553 12.448 15 13 15V18C13 18.553 13.448 19 14 19H15C15.552 19 16 18.553 16 18C16 17.447 15.552 17 15 17ZM14 11.0996C14.607 11.0996 15.1 10.6076 15.1 9.9996C15.1 9.3926 14.607 8.9006 14 8.9006C13.393 8.9006 12.9 9.3926 12.9 9.9996C12.9 10.6076 13.393 11.0996 14 11.0996Z" fill="#919EAB"/>
+                        <path d="M25 4H4V25H25V4Z" fill="#00848E"/>
+                        </g>
+                    </svg>
+                    <p class="header-description" id="header-description">
+                        This is your funnel preview. The campaign will be triggered only after your buyer completed his order.<br>
+                        You can change the design of funnel offers in the “Design” tab located under the app settings.
+                    </p>
+                    <p class="header-description-restar" id="header-description-restar" style="display: none;">
+                        This upsell funnel is complete. <span id = "clear-button" class = "clear-button" onclick='clearButtonClick()'>Click here to restart the preview.</span>
+                    </p>
+                </div>
+            </div>
+            <!-- <div class="bottom-header" id="bottom-header">
+                <div>  
+                    <span id = "bottom-header-text">
+                        This is a thank you page simulation
+                    </span>
+                </div>
+                <div id = "clear-button" class = "clear-button" onclick='clearButtonClick()'> Restart </div>
+            </div> -->
+        </header>
+               
+		<div class="mobile-container" id="mobile-container-div">
+            <div class="mobile-show">
+                <!-- <div class="mobile-header">
+                    <div class="mobile-header-camera"></div>
+                    <div class="mobile-header-microphone"></div>
+                </div> -->
+
+                <div class="mobile-content" id="mobile-content-div">
+                    <iframe src="/static/preview/page.html?shop={{__SHOP_NAME__}}" id="mobile-frame" width="100%" height = "100%" frameborder="0" scrolling="no" seamless>
+                    </iframe>
+                </div>
+                <!-- <div class="mobile-bottom-microphone"></div> -->
+            </div>
+        </div>
+
+        <div class="desktop-container hide" id="desktop-container-div">
+            <!-- <iframe src="/static/preview/desktop.html?shop={{__SHOP_NAME__}}" id="desktop-frame" width="100%" height = "100%" frameborder="0" scrolling="no">
+            </iframe> -->
+        </div>
+        
+        <script>
+            // if(localStorage.getItem('upsellShopSettingsTitle')){
+            //     document.getElementById('header-title').innerHTML = localStorage.getItem('upsellShopSettingsTitle');
+            // }
+
+            if(localStorage.getItem('upsellShopSettingsDescription')){
+                document.getElementById('header-description').innerHTML = localStorage.getItem('upsellShopSettingsDescription');
+            }
+
+            // if(localStorage.getItem('upsellCampaingTitle') && document.getElementById('header-title')){
+            //     document.getElementById('header-title').innerHTML = localStorage.getItem('upsellCampaingTitle');
+            // }
+
+            if(localStorage.getItem('upsellCampaingDescription') && document.getElementById('header-description')){
+                document.getElementById('header-description').innerHTML = localStorage.getItem('upsellCampaingDescription');
+            }
+
+            var campaign = localStorage.getItem('upsellCampaing') ? JSON.parse(localStorage.getItem('upsellCampaing')) : null;
+
+            if(campaign && campaign.page_to_show === 'cart_page'){
+                document.getElementById('header-description').innerHTML = "This is your funnel preview. The funnel will be triggered when your customer goes to checkout from the cart page.<br>You can change the design of funnel offers in the “Design” tab located under the app settings."
+            }
+            
+
+        </script>
+	</body>
+</html>
