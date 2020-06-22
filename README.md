@@ -1,6 +1,3 @@
-Shopify Honeycomb Upsell Funnels by Conversion Bear 🐻
----
-
 🏁Start here
 ---
 
@@ -31,8 +28,7 @@ Quick Start Guide - Don't start without going over these bullets, they'll save y
 
 Read this before deploying to production
 ---
-- Database is hosted on mongo atlas with Eyal's credentials. 
+- Database is hosted on mongo atlas with whitehorse's credentials. 
 - Hosting is on heroku
 - A deploy will trigger each time there's a push to master
 - Run `yarn run build:widget` before deploying to production. This will tranpile the storefront script to the static folder
-- View heroku logs via the terminal with `heroku logs --tail --app conversionbear-trustbadges`
